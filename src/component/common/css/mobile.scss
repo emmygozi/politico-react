@@ -1,0 +1,150 @@
+$background_color_1: #141534;
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+#wrap {
+	.col {
+		float: left;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+@media screen and (max-width: 800px) {
+	#mynav-flex-container {
+		display: flex;
+		display: flex;
+	}
+	#nav-flex-container {
+		display: none;
+	}
+	#mynavbar {
+		display: none;
+	}
+	#image-text {
+		width: 100%;
+		font-size: 1em;
+	}
+	.nav-styles {
+		a {
+			display: none;
+		}
+		display: none;
+	}
+	.myflex-container {
+		display: none;
+	}
+	#push-right {
+		width: 100%;
+		background-color: $background_color_1;
+		height: 4rem;
+		display: block;
+	}
+	#ham {
+		display: block;
+		float: right;
+		font-size: 30px;
+	}
+	#show-image-mobile {
+		background-image: url(../img/resizewoman.png);
+		height: 60vh;
+		margin-left: -6rem;
+		margin-bottom: 1.6rem;
+		background-repeat: no-repeat;
+	}
+	.myfooter {
+		>p {
+			font-size: 0.7em;
+		}
+	}
+	#pollogo {
+		display: block;
+		padding-top: 1.5rem;
+	}
+	a {
+		#ham {
+			height: 2rem;
+		}
+	}
+	#signup-image-case {
+		display: none;
+	}
+	#signup-case {
+		width: 100%;
+	}
+	#signup-header {
+		font-size: 0.8em;
+	}
+	.signup-flex-container {
+		height: 95vh;
+	}
+	.small-font-size {
+		margin-top: -1.2rem;
+		font-size: 15px;
+	}
+	.button {
+		font-size: 15px;
+	}
+	#mytextarea {
+		width: 83%;
+	}
+	#my-petion-button {
+		margin-left: -1.1em;
+	}
+	#resize-signup-form {
+		line-height: 3rem;
+	}
+	#side-bar {
+		display: none;
+	}
+	#little-cards1 {
+		display: none;
+	}
+	#little-cards2 {
+		display: none;
+	}
+	#little-cards3 {
+		display: none;
+	}
+	#little-cards4 {
+		display: none;
+	}
+	#report-table {
+		margin-left: -4%;
+		margin-top: -3em;
+	}
+	table {
+		font-size: 14px;
+		margin-left: 0rem;
+	}
+	.petbuttontwo {
+		padding: 0px 0px;
+	}
+	#mobile-view-office {
+		width: 54vh;
+		margin-left: 1em;
+	}
+	#make-mobile-table-bigger {
+		width: 55vh;
+	}
+	#hide-political-party {
+		margin-left: 1em;
+		margin-top: -2em;
+	}
+	#adjust-for-mobile {
+		width: 48vh;
+	}
+	#remove-margin-here {
+		margin-left: 1em;
+	}
+	#reduce-text-size {
+		width: 50vh;
+    }
+    #drop-down-container {
+        display: block;
+    }
+}
