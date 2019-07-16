@@ -5,6 +5,8 @@ import serverAPI from './serverAPI';
 import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
+  REGISTER_SUCCESS,
+  REGISTER_FAILURE
 } from './action';
 
 
@@ -28,3 +30,23 @@ export const login = (userData) => dispatch => {
       throw err;
     })
   }
+
+  export const register = (userData) => dispatch => {
+    return axios.post(`${serverAPI}/auth/signup`, userData)
+      .then(response => {
+        if(response.data.status === 201) {
+          localStorage.setItem('token', response.data.data[0].token);
+          setAuthToken(response.data.data[0].token);
+          response.message = 'Registration success';
+          toast.success(response.message);
+          dispatch({ type: REGISTER_SUCCESS, payload: response.data.data[0] });
+          return response;
+        }
+      })
+      .catch(err => {
+        err.response.message = 'Login failed';
+        dispatch({ type: REGISTER_FAILURE, payload: err.response.data });
+        toast.error(err.response.data.error);
+        throw err;
+      })
+    }

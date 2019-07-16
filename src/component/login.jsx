@@ -43,7 +43,7 @@ class Login extends Component {
     };
 
     this.props.login(user).then(res => {
-    //   this.props.history.push("/home");
+    
     });
   }
 
@@ -112,7 +112,7 @@ class Login extends Component {
                 <br />
                 <button className="button"> Login</button>
               </div>
-              <Link to="resetpasswordcomplete.html" style={resetTagStyle}>
+              <Link to="" style={resetTagStyle}>
                 Forgot password?
               </Link>
             </form>
