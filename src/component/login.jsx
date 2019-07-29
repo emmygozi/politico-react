@@ -42,8 +42,8 @@ class Login extends Component {
       password: data.password
     };
 
-    this.props.login(user).then(res => {
-    
+    this.props.login(user).then((res) => {
+      this.props.history.push('/admin');
     });
   }
 

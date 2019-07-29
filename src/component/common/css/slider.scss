@@ -1,0 +1,68 @@
+body {
+  overflow: auto;
+}
+
+.party-form {
+  display: flex;
+  overflow-y: scroll;
+  padding-bottom: 1.25rem;
+}
+.party-form input {
+  margin: 0 0.25rem;
+  min-width: 125px;
+  border: 1px solid #eee;
+  border-left: 3px solid;
+  border-radius: 5px;
+  height: 2rem;
+  opacity: 0.5;
+  background-color: black;
+  color: white;
+  transition: border-color 0.5s ease-out;
+}
+
+.party-form input:required:valid {
+  border-left-color: palegreen;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.party-form input::placeholder {
+  color: white;
+}
+
+.party-form input:focus::placeholder {
+  color: white;
+}
+
+.party-form input:focus {
+  border-left-color: palegreen;
+  background-color: black;
+  opacity: 0.7;
+}
+
+
+.card {
+  width: 10rem;
+  height: 15rem;
+  font-size: 15px;
+  line-height: 14px;
+  color: black;
+}
+
+.makeRow {
+  display: flex;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 800px) {
+  .party-form {
+    display: block;
+    margin: 30% 30% 0% 30%;
+    width: 100%;
+  }
+
+  #submitButton {
+    margin-left: 37%;
+  }
+}

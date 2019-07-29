@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import ResultTable from "./common/cardContainer/cardContainer";
 import { fetchResult } from "../actions/result";
 import "./common/css/index.scss";
 import "./common/css/mobile.scss";
@@ -34,13 +33,6 @@ class Result extends Component {
     data[input.name] = input.value;
 
     this.setState({ data });
-  };
-
-  handleDelete = (e, id) => {
-    e.preventDefault();
-    this.props.deleteGuide(id).then(res => {
-      window.location.reload();
-    });
   };
 
   render() {
@@ -116,12 +108,7 @@ class Result extends Component {
         <div className="body-container">
           <hr />
 
-          <h2 className="body-container">All results</h2>
-          <h4>
-            <Link className="result-container" to="/create-result">
-              Create a result?
-            </Link>
-          </h4>
+          <h2 className="body-container">Local Government Results</h2>
 
           <div className="result-container">{results}</div>
           <Footer />
@@ -133,7 +120,6 @@ class Result extends Component {
 
 Result.propTypes = {
   fetchResult: PropTypes.func.isRequired
-  // deleteGuide: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({

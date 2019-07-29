@@ -1,0 +1,89 @@
+@media screen and (max-width: 800px) {
+  #makeRowMobile {
+    display: block;
+    margin: 20%;
+  }
+
+  #cardMobile {
+    width: 50%;
+    height: 15rem;
+  }
+  #signup-image-case-two {
+    width: 100%;
+  }
+
+  #signup-case-two {
+    display: none;
+  }
+  .bolden {
+    width: 100%;
+  }
+  .striped-background-child {
+    margin-left: 1.5em;
+    height: 80%;
+    margin-top: 1em;
+    position: relative;
+  }
+  #arrangehome {
+    margin-top: 1em;
+    width: 70%;
+  }
+
+  #arrange {
+    margin-top: -2.5em;
+  }
+  #boldit {
+    margin-top: -0.2em;
+    margin-bottom: 2em;
+    width: 70%;
+  }
+  #boldittwo {
+    width: 70%;
+    margin-top: -0.1em;
+  }
+  #become-cand {
+  }
+
+  #candidateForm {
+    margin-left: 50%;
+  }
+  select {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #signup-image-case-two {
+    width: 100%;
+  }
+
+  #signup-case-two {
+    display: none;
+  }
+  .bolden {
+    width: 100%;
+  }
+  .striped-background-child {
+    margin-left: 1.5em;
+    height: 80%;
+    margin-top: 1em;
+    position: relative;
+  }
+  #arrangehome {
+    margin-top: 1em;
+    width: 70%;
+  }
+
+  #arrange {
+    margin-top: -2.5em;
+  }
+  #boldit {
+    margin-top: -0.2em;
+    margin-bottom: 2em;
+    width: 70%;
+  }
+  #boldittwo {
+    width: 70%;
+    margin-top: -0.1em;
+  }
+}
