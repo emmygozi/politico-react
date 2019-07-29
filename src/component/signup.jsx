@@ -54,8 +54,8 @@ class Signup extends Component {
       phoneNumber: data.phoneNumber,
     };
 
-    this.props.register(user).then(res => {
-      
+    this.props.register(user).then((res) => {
+      this.props.history.push('/admin');
     });
   }
 
