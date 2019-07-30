@@ -12,11 +12,13 @@
     "eslint-fix": "eslint . --fix --ignore-path .gitignore",
     "eslint": "eslint . --ignore-path .gitignore",
     "watch": "npm-watch",
-    "test": "jest \"-u\" ",
+    "test": "jest --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
     "test-watch": "jest --watchAll"
   },
   "dependencies": {
     "@babel/plugin-transform-async-to-generator": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "axios": "^0.18.0",
     "babel-jest": "^24.8.0",
     "coveralls": "^3.0.5",
@@ -41,7 +43,8 @@
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-mock-store": "^1.5.3",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "sinon": "^7.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -52,7 +55,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^2.1.1",
+    "css-loader": "^3.1.0",
     "debug": "^4.1.1",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.0",
