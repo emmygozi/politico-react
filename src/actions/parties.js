@@ -11,11 +11,9 @@ import {
 } from "./action";
 
 export const registerParty = newParty => dispatch => {
-  console.log(newParty, "newParty details");
   return axios
     .post(`${serverAPI}/parties`, newParty)
     .then(response => {
-      console.log(response.data.data, "yaay");
       toast.success("Party successfully created!");
       dispatch({
         type: REGISTER_PARTY_SUCCESS,
@@ -31,11 +29,9 @@ export const registerParty = newParty => dispatch => {
 };
 
 export const editPartyName = (id, editParty) => dispatch => {
-  console.log(editParty, "editParty details");
   return axios
     .patch(`${serverAPI}/parties/${id}/name`, editParty)
     .then(response => {
-      console.log(response.data.data, "yaay");
       toast.success("Party successfully updated!");
       dispatch({
         type: MODIFY_PARTY_SUCCESS,
@@ -53,7 +49,6 @@ export const deleteParty = id => dispatch => {
   return axios
     .delete(`${serverAPI}/parties/${id}`)
     .then(response => {
-      console.log(response.data.data, "yaay");
       toast.success("Party successfully deleted!");
       dispatch({
         type: DELETE_PARTY_SUCCESS,

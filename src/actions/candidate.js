@@ -11,7 +11,6 @@ export const fetchOffice = () => dispatch => {
   return axios
     .get(`${serverAPI}/offices`)
     .then(response => {
-      console.log(response.data.data, "yaay");
       dispatch({
         type: FETCH_OFFICE_SUCCESS,
         payload: response.data.data
@@ -26,7 +25,6 @@ export const fetchParties = () => dispatch => {
   return axios
     .get(`${serverAPI}/parties`)  
     .then(response => {
-      console.log(response.data.data, "yaay");
       dispatch({
         type: FETCH_PARTY_SUCCESS,
         payload: response.data.data

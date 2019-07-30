@@ -40,7 +40,6 @@ class Admin extends Component {
 
   handleInputChange = ({ currentTarget: input }) => {
     const data = { ...this.state.data };
-    console.log(input.value, "allinput");
     data[input.name] = input.value;
 
     this.setState({ data });
@@ -61,7 +60,6 @@ class Admin extends Component {
   onSubmit(e) {
     e.preventDefault();
     const { data } = this.state;
-    console.log(data, "submit data");
     const { registerParty } = this.props;
     const newParty = {
       name: data.name,
@@ -74,21 +72,17 @@ class Admin extends Component {
 
   render() {
     const { parties } = this.props.candidate;
-    console.log(this.props.parties, "Party sucess");
     let allParties;
-    console.log(parties, "state parties");
     if (parties === undefined) return <></>;
     allParties = parties.map((result, i) => (
       <PartyCardContainer
         key={i}
         id={result.id}
         name={result.name}
-        hqaddress={result.hqaddress}
         delete={event => this.handleDelete(event, result.id)}
       />
     ));
 
-    console.log(allParties, "All parties");
 
     const notifyCandidates = {
       lineHeight: "1.5",

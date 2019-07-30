@@ -43,7 +43,6 @@ class Candidate extends Component {
 
   handleInputChange = ({ currentTarget: select }) => {
     const data = { ...this.state.data };
-    console.log(select.value, "allselect");
     data[select.name] = select.value;
 
     this.setState({ data });
@@ -57,7 +56,6 @@ class Candidate extends Component {
   onSubmit(e) {
     e.preventDefault();
     const { data } = this.state;
-    console.log(data, "submit data");
     const user = {
       office: data.office,
       party: data.party
@@ -69,13 +67,10 @@ class Candidate extends Component {
   render() {
     const { offices, parties } = this.props.candidate;
     let allParties;
-    console.log(parties, "state parties");
     if (parties === undefined) return <></>;
     allParties = parties.map((result, i) => (
       <DropDownContainer key={i} id={result.id} name={result.name} />
     ));
-
-    console.log(allParties, "All parties");
 
     const allOffices = offices.map((result, i) => (
       <DropDownContainer key={i} id={result.id} name={result.name} />

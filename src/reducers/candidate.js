@@ -6,7 +6,6 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  console.log(action.payload, "Stuffss");
   switch (action.type) {
     case FETCH_OFFICE_SUCCESS:
       return {

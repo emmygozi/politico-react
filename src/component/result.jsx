@@ -36,7 +36,6 @@ class Result extends Component {
   };
 
   render() {
-    console.log(this.props.results.results[0], "Prop results");
     const aResult = this.props.results;
     const results = aResult ? (
       this.props.results.results.map((result, i) => (
