@@ -59,16 +59,17 @@ class Result extends Component {
       <div>
         <div id="mynav-flex-container">
           <div id="mynavbar" className="nav-styles">
-            <Link to="">Home</Link> <Link to="">View result</Link>
-            <Link to="">Become a candidate</Link>
-            <Link to="">Vote</Link> <Link to="">Petition result</Link>
+            <Link to="/">Home</Link>
+            <Link to="/admin">Party</Link>
+            <Link to="/candidate">Become a candidate</Link>
+            <Link to="/view-result">Result</Link>
           </div>
-          <div id="push-right" className="nav-styles">
-            <Link id="pollogo" to="">
+          <div id="push-right" className="nav-styles rightSmall">
+            <Link id="pollogo" to="/">
               POLITICO
             </Link>
-            <Link id="reg" to="">
-              Signup
+            <Link onClick={this.logout} to="">
+              Logout
             </Link>
             <a id="ham" onClick={this.hideMobileDiv}>
               <i className="fa fa-bars" />
@@ -79,32 +80,26 @@ class Result extends Component {
         {this.state.showDropDown ? (
           <div id="drop-down-container">
             <div className="drop-down" id="dropdown-child-one">
-              <Link to="index.html">Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div className="drop-down">
-              <Link to="">View result</Link>
+              <Link to="/admin">Party</Link>
             </div>
             <div className="drop-down">
-              <Link to="">Petition result</Link>
+              <Link to="/candidate">Become a candidate</Link>
             </div>
             <div className="drop-down">
-              <Link to="">Become a candidate</Link>
-            </div>
-            <div className="drop-down">
-              <Link to="">Vote</Link>
+              <Link to="/view-result">Result</Link>
             </div>
             <div className="drop-down" id="last-two">
-              <Link to="">Signup</Link>
-            </div>
-            <div className="drop-down" id="last-two">
-              <Link id="logout" to="#">
+              <Link onClick={this.logout} to="">
                 Logout
               </Link>
             </div>
           </div>
         ) : (
           ""
-        )}
+        )}|
         <div className="body-container">
           <hr />
 

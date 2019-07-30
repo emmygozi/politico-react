@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { register } from "../actions/users";
+import Footer from "./common/footer";
 import "./common/css/index.scss";
 import "./common/css/signup.scss";
 import "./common/css/mobile.scss";
@@ -51,11 +52,11 @@ class Signup extends Component {
       passportUrl: data.passportUrl,
       password: data.password,
       confirmpass: data.confirmpass,
-      phoneNumber: data.phoneNumber,
+      phoneNumber: data.phoneNumber
     };
 
-    this.props.register(user).then((res) => {
-      this.props.history.push('/admin');
+    this.props.register(user).then(res => {
+      this.props.history.push("/admin");
     });
   }
 
@@ -64,21 +65,25 @@ class Signup extends Component {
       fontSize: "15px",
       color: "#111A25"
     };
+
+    const signupCaseStyle = {
+      lineHeight: "70px"
+    };
+
+    const formStyle = {
+      lineHeight: "61px"
+    };
     return (
       <div>
         <div id="mynav-flex-container">
           <div id="mynavbar" className="nav-styles">
-            <Link to="">Home</Link> <Link to="">View result</Link>
-            <Link to="">Become a candidate</Link>
-            <Link to="">Vote</Link> <Link to="">Petition result</Link>
+            <Link to="/">Home</Link>
           </div>
-          <div id="push-right" className="nav-styles">
-            <Link id="pollogo" to="">
+          <div id="push-right" className="nav-styles rightSmall">
+            <Link id="pollogo" to="/">
               POLITICO
             </Link>
-            <Link id="reg" to="">
-              Signup
-            </Link>
+            <Link to="/login">Login</Link>
             <a id="ham" onClick={this.hideMobileDiv}>
               <i className="fa fa-bars" />
             </a>
@@ -88,27 +93,10 @@ class Signup extends Component {
         {this.state.showDropDown ? (
           <div id="drop-down-container">
             <div className="drop-down" id="dropdown-child-one">
-              <Link to="index.html">Home</Link>
-            </div>
-            <div className="drop-down">
-              <Link to="">View result</Link>
-            </div>
-            <div className="drop-down">
-              <Link to="">Petition result</Link>
-            </div>
-            <div className="drop-down">
-              <Link to="">Become a candidate</Link>
-            </div>
-            <div className="drop-down">
-              <Link to="">Vote</Link>
+              <Link to="/">Home</Link>
             </div>
             <div className="drop-down" id="last-two">
-              <Link to="">Signup</Link>
-            </div>
-            <div className="drop-down" id="last-two">
-              <Link id="logout" to="#">
-                Logout
-              </Link>
+              <Link to="/login">Login</Link>
             </div>
           </div>
         ) : (
@@ -118,10 +106,10 @@ class Signup extends Component {
           <div id="signup-image-case">
             <img src="https://i.ibb.co/zZR4BGR/signupthree.jpg" width="100%;" />
           </div>
-          <div id="signup-case">
-            <h2 id="signup-header">Signup</h2>
+          <div id="signup-case" style={signupCaseStyle}>
             <div id="signup-input-case">
-              <form onSubmit={this.onSubmit} id="register-form">
+            <h5 id="signup-header">Signup</h5>
+              <form onSubmit={this.onSubmit} id="register-form" style={formStyle}>
                 <div>
                   <p className="small-font-size">Firstname</p>
                   <input
@@ -189,16 +177,11 @@ class Signup extends Component {
                   <br />
                   <button className="button"> Signup</button>
                 </div>
-                <Link to="" style={resetTagStyle}>
-                  Forgot password?
-                </Link>
               </form>
             </div>
           </div>
         </div>
-        <div className="myfooter">
-          <p>&#169; EMMYGOZI 2019, Andela Nigeria Fellowship Cycle 41</p>
-        </div>
+        <Footer />
       </div>
     );
   }

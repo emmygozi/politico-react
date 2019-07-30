@@ -6,7 +6,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   REGISTER_SUCCESS,
-  REGISTER_FAILURE
+  REGISTER_FAILURE,
+  LOGOUT
 } from './action';
 
 
@@ -50,3 +51,10 @@ export const login = (userData) => dispatch => {
         throw err;
       })
     }
+
+export const logout = () => dispatch => {
+  localStorage.removeItem('token');
+  window.location.href = '/';
+  setAuthToken(false);
+  dispatch({ type: LOGOUT });
+}

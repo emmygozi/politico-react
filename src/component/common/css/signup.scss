@@ -1,10 +1,12 @@
 body {
   font-family: "Open Sans", sans-serif;
+  // position: fixed;
+  overflow-y: hidden;  
 }
 
 .signup-flex-container {
   display: flex;
-  height: 85vh;
+  height: 90vh;
   background-color: #eeeeee;
   border-radius: 1%;
   margin-top: 3.5em;
@@ -109,6 +111,9 @@ input {
 }
 
 @media screen and (max-width: 720px) {
+  body {
+    position: relative;
+  }
   .signup-flex-container,
   img {
     height: 100vh;
