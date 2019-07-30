@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" time="2.459">
-  <testsuite name="&lt;Signup /&gt;" errors="0" failures="0" skipped="0" timestamp="2019-07-30T11:21:45" time="1.108" tests="1">
-    <testcase classname="&lt;Signup /&gt; should render the Login component correctly" name="&lt;Signup /&gt; should render the Login component correctly" time="0.014">
+<testsuites name="jest tests" tests="14" failures="0" time="7.105">
+  <testsuite name="Tests for the AUTH REDUCER" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:01" time="0.985" tests="2">
+    <testcase classname="Tests for the AUTH REDUCER INITIAL STATE" name="Tests for the AUTH REDUCER INITIAL STATE" time="0.011">
+    </testcase>
+    <testcase classname="Tests for the AUTH REDUCER Test for REGISTER_SUCCESS" name="Tests for the AUTH REDUCER Test for REGISTER_SUCCESS" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Login /&gt;" errors="0" failures="0" skipped="0" timestamp="2019-07-30T11:21:46" time="0.141" tests="1">
-    <testcase classname="&lt;Login /&gt; should render the Login component correctly" name="&lt;Login /&gt; should render the Login component correctly" time="0.003">
+  <testsuite name="Tests for the AUTH ACTIONS" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:01" time="1.071" tests="3">
+    <testcase classname="Tests for the AUTH ACTIONS Dispatches the REGISTER_SUCCESS action and payload" name="Tests for the AUTH ACTIONS Dispatches the REGISTER_SUCCESS action and payload" time="0.116">
+    </testcase>
+    <testcase classname="Tests for the AUTH ACTIONS Dispatches the LOGIN_SUCCESS action and payload" name="Tests for the AUTH ACTIONS Dispatches the LOGIN_SUCCESS action and payload" time="0.055">
+    </testcase>
+    <testcase classname="Tests for the AUTH ACTIONS Logs Out A Current User" name="Tests for the AUTH ACTIONS Logs Out A Current User" time="0.008">
     </testcase>
   </testsuite>
-  <testsuite name="SAMPLE TEST" errors="0" failures="0" skipped="0" timestamp="2019-07-30T11:21:47" time="0.037" tests="1">
+  <testsuite name="Tests for the PARTIES ACTIONS" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:01" time="1.112" tests="3">
+    <testcase classname="Tests for the PARTIES ACTIONS Dispatches the REGISTER_PARTY_SUCCESS action and payload" name="Tests for the PARTIES ACTIONS Dispatches the REGISTER_PARTY_SUCCESS action and payload" time="0.123">
+    </testcase>
+    <testcase classname="Tests for the PARTIES ACTIONS Dispatches the MODIFY_PARTY_SUCCESS action and payload" name="Tests for the PARTIES ACTIONS Dispatches the MODIFY_PARTY_SUCCESS action and payload" time="0.049">
+    </testcase>
+    <testcase classname="Tests for the PARTIES ACTIONS Dispatches the MODIFY_PARTY_SUCCESS action and payload" name="Tests for the PARTIES ACTIONS Dispatches the MODIFY_PARTY_SUCCESS action and payload" time="0.043">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Signup /&gt;" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:03" time="0.225" tests="1">
+    <testcase classname="&lt;Signup /&gt; should render the Login component correctly" name="&lt;Signup /&gt; should render the Login component correctly" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Login /&gt;" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:03" time="0.271" tests="1">
+    <testcase classname="&lt;Login /&gt; should render the Login component correctly" name="&lt;Login /&gt; should render the Login component correctly" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tests for the PARTIES ACTIONS" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:03" time="0.495" tests="2">
+    <testcase classname="Tests for the PARTIES ACTIONS Dispatches the FETCH_OFFICE_SUCCESS action and payload" name="Tests for the PARTIES ACTIONS Dispatches the FETCH_OFFICE_SUCCESS action and payload" time="0.069">
+    </testcase>
+    <testcase classname="Tests for the PARTIES ACTIONS Dispatches the FETCH_PARTIES_SUCCESS action and payload" name="Tests for the PARTIES ACTIONS Dispatches the FETCH_PARTIES_SUCCESS action and payload" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="SAMPLE TEST" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:03" time="0.106" tests="1">
     <testcase classname="SAMPLE TEST should return a successful sample test " name="SAMPLE TEST should return a successful sample test " time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tests for the PARTIES ACTIONS" errors="0" failures="0" skipped="0" timestamp="2019-07-30T14:30:03" time="0.132" tests="1">
+    <testcase classname="Tests for the PARTIES ACTIONS Dispatches the FETCH_RESULT_SUCCESS action and payload" name="Tests for the PARTIES ACTIONS Dispatches the FETCH_RESULT_SUCCESS action and payload" time="0.005">
     </testcase>
   </testsuite>
 </testsuites>
