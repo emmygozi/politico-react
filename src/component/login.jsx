@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { login } from "../actions/users";
+import Footer from "./common/footer";
 import "./common/css/index.scss";
 import "./common/css/signup.scss";
 import "./common/css/mobile.scss";
@@ -56,40 +57,41 @@ class Login extends Component {
     return (
         <div>
         <div id="mynav-flex-container">
-        <div id="mynavbar" className="nav-styles">
-          <Link to="">Home</Link> <Link to="">View result</Link>
-          <Link to="">Become a candidate</Link>
-          <Link to="">Vote</Link> <Link to="">Petition result</Link>
+          <div id="mynavbar" className="nav-styles">
+            <Link to="/">Home</Link>
+          </div>
+          <div id="push-right" className="nav-styles rightSmall">
+            <Link id="pollogo" to="/">
+              POLITICO
+            </Link>
+            <Link to="/register">
+              Signup
+            </Link>
+            <a id="ham" onClick={this.hideMobileDiv}>
+              <i className="fa fa-bars" />
+            </a>
+          </div>
         </div>
-        <div id="push-right" className="nav-styles">
-            <Link id="pollogo" to="">POLITICO</Link>
-          <Link id="reg" to="">Signup</Link>
-          <a id="ham"  onClick={this.hideMobileDiv}><i className='fa fa-bars'></i></a>
-        </div>
-      </div>
-  
-      {this.state.showDropDown ? (<div id="drop-down-container">
-        <div className="drop-down" id="dropdown-child-one">
-          <Link to="index.html">Home</Link>
-        </div>
-        <div className="drop-down"><Link to="">View result</Link></div>
-        <div className="drop-down"><Link to="">Petition result</Link></div>
-        <div className="drop-down">
-          <Link to="">Become a candidate</Link>
-        </div>
-        <div className="drop-down"><Link to="">Vote</Link></div>
-        <div className="drop-down" id="last-two">
-          <Link to="">Signup</Link>
-        </div>
-        <div className="drop-down" id="last-two">
-          <Link id="logout" to="#">Logout</Link>
-        </div>
-      </div>) : ''}
+
+        {this.state.showDropDown ? (
+          <div id="drop-down-container">
+            <div className="drop-down" id="dropdown-child-one">
+              <Link to="/">Home</Link>
+            </div>
+            <div className="drop-down" id="last-two">
+              <Link to="/register">
+                Signup
+              </Link>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
       <div className="signup-flex-container">
         <div id="signup-image-case">
           <img src="https://i.ibb.co/zZR4BGR/signupthree.jpg" width="100%;" />
         </div>
-        <div id="signup-case">
+        <div id="signup-case" className="makelonger">
           <h2 id="signup-header">Login</h2>
           <div id="signup-input-case">
             <form onSubmit={this.onSubmit}>
@@ -119,9 +121,7 @@ class Login extends Component {
           </div>
         </div>
       </div>
-      <div className="myfooter">
-      <p>&#169; EMMYGOZI 2019, Andela Nigeria Fellowship Cycle 41</p>
-    </div>
+      <Footer />
       </div>
     );
   }

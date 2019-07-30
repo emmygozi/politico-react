@@ -2,7 +2,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   REGISTER_SUCCESS,
-  REGISTER_FAILURE
+  REGISTER_FAILURE,
+  LOGOUT
 } from "../actions/action";
 
 const initialState = {
@@ -41,6 +42,8 @@ export default function(state = initialState, action) {
         error: action.payload.status,
         message: action.payload.message
       };
+    case LOGOUT:
+      return initialState;
     default:
       return state;
   }

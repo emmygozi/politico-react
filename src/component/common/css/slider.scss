@@ -55,7 +55,14 @@ body {
   margin-top: 4rem;
 }
 
+.makelonger {
+    height: 95vh;
+}
+
 @media screen and (max-width: 800px) {
+    body {
+    position: relative;
+  }
   .party-form {
     display: block;
     margin: 30% 30% 0% 30%;
