@@ -13,7 +13,6 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  console.log(action.payload, "Stuffss");
   switch (action.type) {
     case REGISTER_PARTY_SUCCESS:
       return {

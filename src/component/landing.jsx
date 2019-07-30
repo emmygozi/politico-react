@@ -93,7 +93,6 @@ class Login extends Component {
     };
 
     const token = localStorage.getItem("token");
-    console.log(token, "Mytoken");
 
     return (
       <div>

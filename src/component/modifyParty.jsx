@@ -42,7 +42,6 @@ class UpdateParty extends Component {
 
   handleInputChange = ({ currentTarget: input }) => {
     const data = { ...this.state.data };
-    console.log(input.value, "allinput");
     data[input.name] = input.value;
 
     this.setState({ data });
@@ -54,7 +53,6 @@ class UpdateParty extends Component {
     let { data } = this.state;
     if (!data) {
     }
-    console.log(e.target, "submit data");
     const { editPartyName } = this.props;
     const editName = {
       name: data.name
@@ -67,16 +65,13 @@ class UpdateParty extends Component {
 
   render() {
     const { parties } = this.props.candidate;
-    console.log(this.props.parties, "Party sucess");
     let editParty;
     const id = Number(this.state.id);
-    console.log(parties, "state parties");
     if (parties === undefined) return <></>;
     editParty = parties.find(result => result.id === id);
     if (editParty === undefined) return <></>;
     editParty = editParty.name;
 
-    console.log(editParty, "EditParty");
 
     const notifyCandidates = {
       lineHeight: "1.5",

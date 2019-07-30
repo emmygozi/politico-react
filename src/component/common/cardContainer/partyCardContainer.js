@@ -14,15 +14,12 @@ const PartyCardContainer = props => {
       <i className="fa fa-umbrella fa-2x" />
       <div className="card-container">
         <h4>
+        Party Name:{"     "}
           <b>
-            Party Name:{" "}
             {props.name}
           </b>
         </h4>
-        <h4>
-          HQ Address:{" "}
-          <b>{props.hqaddress}</b>
-        </h4>
+        <p>party registered on politico</p>
         <Link to={`/edit_party?id=${props.id}`}>
         Edit
       </Link>
