@@ -1,53 +1,51 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+    filename: "bundle.js",
+    path: path.join(__dirname, "./dist"),
+    publicPath: "/"
   },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ["@babel/react", "@babel/env"]
-          }
-        }
-      },
-      {
-        test: /\.(css|scss|sass)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        enforce: 'pre'
-      },
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name]-[hash:8].[ext]'
-            },
-          }
-        ]
-      }
-    ]
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    watchOptions: {
+      ignored: /node_modules/
+    },
+    host: "localhost",
+    port: 5000
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.css', '.scss']
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    hot: true
+  module: {
+    rules: [
+      {
+        test: /\.jsx|js?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+      },
+      {
+        test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+        exclude: /node_modules/,
+        use: ["file-loader"]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+      template: "./src/index.html",
+      path: path.join(__dirname, "./dist"),
+      filename: "index.html"
+    }),
+    new webpack.HotModuleReplacementPlugin({})
   ]
-}
+};

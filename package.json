@@ -12,11 +12,13 @@
     "eslint-fix": "eslint . --fix --ignore-path .gitignore",
     "eslint": "eslint . --ignore-path .gitignore",
     "watch": "npm-watch",
-    "test": "jest \"-u\" ",
+    "test": "jest --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
     "test-watch": "jest --watchAll"
   },
   "dependencies": {
     "@babel/plugin-transform-async-to-generator": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "axios": "^0.18.0",
     "babel-jest": "^24.8.0",
     "coveralls": "^3.0.5",
