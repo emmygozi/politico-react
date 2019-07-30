@@ -17,10 +17,10 @@ module.exports = {
       ignored: /node_modules/
     },
     host: "localhost",
-    port: 5000
+    port: 8080
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css', '.scss']
+    extensions: ["*", ".js", ".jsx", ".css", ".scss"]
   },
   module: {
     rules: [
@@ -30,8 +30,8 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.css$/,
-        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+        test: /\.(css|scss)$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
